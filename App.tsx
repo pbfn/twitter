@@ -1,7 +1,4 @@
 import React from 'react';
-import {
-  StyleSheet,
-} from 'react-native';
 import AppLoading from  'expo-app-loading'
 
 import {
@@ -9,7 +6,9 @@ import {
   Roboto_700Bold,
   Roboto_300Light
 } from '@expo-google-fonts/roboto'
-import HomePage from './src/pages/HomePage';
+
+
+import Routes from './src/routes';
 
 
 export default function App() {
@@ -22,15 +21,6 @@ export default function App() {
     if(!fontsLoaded)
       return <AppLoading></AppLoading>
   return (
-      <HomePage></HomePage>
+      <Routes />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
